@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<header>
+  <h1>Quotes</h1>
+</header>
+
+<section>
+  <% @quotes.each do |quote| %>
+    <%= link_to quote do %>
+      <div class="quote">
+        <%= quote.content %>
+        <%= quote.author %>
+      </div>
+    <% end %>
+  <% end %>
+</section>
+
+<%= button_to 'Add Quote',  new_quote_path, method: :get, class: "btn btn-primary" %>

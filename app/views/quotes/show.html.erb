@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+<%= @quote.content %>
+<%= @quote.author %>
+<%= button_to 'Edit', edit_quote_path(@quote), method: :get, class: 'btn btn-primary' %>
+<%= button_to 'Back', quotes_path, method: :get, class: 'btn btn-primary' %>
