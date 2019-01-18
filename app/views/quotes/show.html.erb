@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
-<%= @quote.content %>
-<%= @quote.author %>
+
+<div class="row">
+  <div class="col-sm">
+    <div class="quote">
+      <%= remove_quote_mark @quote.content %>
+      <span class="author"><%= @quote.author %></span>
+    </div>
+  </div>
+</div>
 <%= button_to 'Edit', edit_quote_path(@quote), method: :get, class: 'btn btn-primary' %>
 <%= button_to 'Back', quotes_path, method: :get, class: 'btn btn-primary' %>

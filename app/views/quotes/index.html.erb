@@ -1,18 +1,22 @@
-<p id="notice"><%= notice %></p>
-
-<header>
-  <h1>Quotes</h1>
-</header>
-
 <section>
+  <div class="row">
   <% @quotes.each do |quote| %>
-    <%= link_to quote do %>
-      <div class="quote">
-        <%= quote.content %>
-        <%= quote.author %>
-      </div>
-    <% end %>
+    <div class="col-sm-4">
+      <%= link_to quote do %>
+            <div class="quote">
+              <%= remove_quote_mark quote.content %>
+              <span class="author">
+                <%= quote.author %>
+              </span>
+            </div>
+      <% end %>
+    </div>
   <% end %>
+  </div>
 </section>
 
-<%= button_to 'Add Quote',  new_quote_path, method: :get, class: "btn btn-primary" %>
+<div class="row">
+  <div id="add">
+    <%= button_to 'Add Quote',  new_quote_path, method: :get, class: "btn btn-success btn-lg" %>
+  </div>
+</div>

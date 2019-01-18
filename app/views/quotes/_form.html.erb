@@ -13,11 +13,11 @@
 
   <div class="actions">
     <%= form.label :content %>
-    <%= form.text_field :content %>
+    <%= form.text_area :content, :rows => "10" %>
 
     <%= form.label :author %>
     <%= form.text_field :author %>
 
-    <%= form.submit %>
+    <%= form.submit "Add quote", class: 'btn btn-primary' %>
   </div>
 <% end %>
