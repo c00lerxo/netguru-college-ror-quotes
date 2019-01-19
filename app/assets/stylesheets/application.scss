@@ -59,8 +59,9 @@ div {
 #notice {
   color: green;
   float: none;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   text-align: center;
+  font-weight: bold;
 }
 
 #error_explanation {
