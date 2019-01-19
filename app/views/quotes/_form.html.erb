@@ -1,23 +1,28 @@
 <%= form_with(model: quote, local: true) do |form| %>
-  <% if quote.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
-
-      <ul>
-      <% quote.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="actions">
-    <%= form.label :content %>
-    <%= form.text_area :content, :rows => "10" %>
 
-    <%= form.label :author %>
-    <%= form.text_field :author %>
+    <div class="row">
+      <div class="col-sm-12 col-centered">
+        <%= form.label 'Quote' %>
+        <%= render 'error', quote: quote, symbol: :content %>
+        <%= form.text_area :content, rows: "10", class: 'form-control' %>
 
-    <%= form.submit "Add quote", class: 'btn btn-primary' %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-centered">
+        <%= form.label :author %>
+        <%= render 'error', quote: quote, symbol: :author %>
+        <%= form.text_field :author, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 col-centered">
+        <%= form.submit "Add quote", class: 'btn btn-success' %>
+      </div>
+    </div>
+
   </div>
 <% end %>

@@ -27,7 +27,6 @@
   &:hover {
     background-color: rgba(230, 230, 230, 0.7);
     color: black;
-    text-decoration-color: transparent;
     box-shadow: 1px 1px 5px #999,
                 2px 2px 6px #999,
                 3px 3px 7px #999;
@@ -52,3 +51,8 @@
     color: black;
   }
 }
+
+#quotes {
+  margin-bottom: 100px;
+}
+
