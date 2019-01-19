@@ -13,3 +13,5 @@
     <%= button_to 'Back', quotes_path, method: :get, class: 'btn btn-success' %>
   </div>
 </div>
+
+<%= render 'comment', comments: @comments %>
