@@ -1,12 +1,15 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
-  <div class="col-sm">
-    <div class="quote">
-      <%= remove_quote_mark @quote.content %>
-      <span class="author"><%= @quote.author %></span>
-    </div>
+  <div class="col-sm-8 col-centered">
+    <%= render 'quote', quote: @quote %>
   </div>
 </div>
-<%= button_to 'Edit', edit_quote_path(@quote), method: :get, class: 'btn btn-primary' %>
-<%= button_to 'Back', quotes_path, method: :get, class: 'btn btn-primary' %>
+<div class="row">
+  <div class="col-sm-4 col-centered">
+    <%= button_to 'Edit', edit_quote_path(@quote), method: :get, class: 'btn btn-success' %>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4 col-centered">
+    <%= button_to 'Back', quotes_path, method: :get, class: 'btn btn-success' %>
+  </div>
+</div>

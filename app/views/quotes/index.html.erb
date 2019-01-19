@@ -3,12 +3,7 @@
   <% @quotes.each do |quote| %>
     <div class="col-sm-4">
       <%= link_to quote do %>
-            <div class="quote">
-              <%= remove_quote_mark add_whitespace_to_long_string quote.content %>
-              <span class="author">
-                <%= quote.author %>
-              </span>
-            </div>
+        <%= render 'quote', quote: quote %>
       <% end %>
     </div>
   <% end %>
