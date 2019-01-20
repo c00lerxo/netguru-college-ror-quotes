@@ -8,7 +8,6 @@ class QuotesController < ApplicationController
 
   # GET /quotes/1
   def show
-    @comments = @quote.comments.all
   end
 
   # GET /quotes/new
