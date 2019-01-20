@@ -1,5 +1,5 @@
 class QuotesController < ApplicationController
-  before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  before_action :set_quote, only: [:show, :edit, :update]
 
   # GET /quotes
   def index
@@ -25,7 +25,7 @@ class QuotesController < ApplicationController
 
     respond_to do |format|
       if @quote.save
-        format.html { redirect_to quotes_url, notice: 'Quote was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Quote was successfully created.' }
       else
         format.html { render :new }
       end
@@ -40,14 +40,6 @@ class QuotesController < ApplicationController
       else
         format.html { render :edit }
       end
-    end
-  end
-
-  # DELETE /quotes/1
-  def destroy
-    @quote.destroy
-    respond_to do |format|
-      format.html { redirect_to quotes_url, notice: 'Quote was successfully destroyed.' }
     end
   end
 
