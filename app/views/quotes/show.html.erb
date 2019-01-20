@@ -13,3 +13,18 @@
     <%= button_to 'Back', root_path, method: :get, class: 'btn btn-success' %>
   </div>
 </div>
+
+<div class="row">
+    <% @comments.each do |comment| %>
+      <div class="col-sm-4 col-centered">
+        <%= comment.content %>
+        <%= comment.author %>
+      </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 col-centered">
+    <%= button_to 'Add comment', new_quote_comment_path(@quote), method: :get, class: 'btn btn-success' %>
+  </div>
+</div>

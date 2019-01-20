@@ -1,0 +1,7 @@
+<% if passed_model.errors.full_messages_for(symbol).any? %>
+  <div id="error_explanation">
+    <% passed_model.errors.full_messages_for(symbol).each do |symbol| %>
+      <%= symbol %>
+    <% end %>
+  </div>
+<% end %>

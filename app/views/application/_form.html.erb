@@ -1,0 +1,27 @@
+<%= form_with(model: passed_model, local: true, url: url) do |form| %>
+  <div class="actions">
+
+    <div class="row">
+      <div class="col-sm-12 col-centered">
+        <%= form.label passed_model.class.name %>
+        <%= render 'error', passed_model: passed_model, symbol: :content %>
+        <%= form.text_area :content, rows: rows_number, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-centered">
+        <%= form.label :author %>
+        <%= render 'error', passed_model: passed_model, symbol: :author %>
+        <%= form.text_field :author, class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 col-centered">
+        <%= form.submit action + " " + passed_model.class.name, class: 'btn btn-success' %>
+      </div>
+    </div>
+
+  </div>
+<% end %>
