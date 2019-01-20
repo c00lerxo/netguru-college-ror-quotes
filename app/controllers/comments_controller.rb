@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
       if @comment.save
         format.html { redirect_to @quote, notice: 'Your comment has been saved.' }
       else
-        format.html { redirect_to new_quote_comment_path, notice: 'Comment saving has failed.' }
+        format.html { render :new }
       end
     end
   end

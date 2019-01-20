@@ -1,0 +1,23 @@
+<section>
+  <% comments.each do |comment| %>
+    <article>
+      <div class="row">
+        <div class="col-sm-3 col-centered">
+          <div class="dialogbox">
+            <span class="comment-author">
+              <%= add_whitespace_to_long_string comment.author %>
+            </span>
+            <div class="body">
+              <span class="tip tip-up"></span>
+              <div class="message">
+                <span>
+                  <%= add_whitespace_to_long_string comment.content %>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  <% end %>
+</section>
